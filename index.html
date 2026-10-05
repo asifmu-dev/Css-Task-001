@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+    <section class="container">
+        <header id="form-header">
+            <h1>Student Registration</h1>
+            <p>Fill in the details below. Fields marked with * are required.</p>
+        </header>
+
+        <form action="#" id="registration-form">
+            <section class="form-section" id="personal-section">
+                <h2>Personal Information</h2>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="fullname">Full Name *</label>
+                        <input type="text" class="input" id="fullname" name="fullname"
+                            placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email *</label>
+                        <input type="email" class="input" id="email" name="email" placeholder="you@example.com"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" class="input" id="phone" name="phone" placeholder="03001234567"
+                            pattern="[0-9]{11}" title="Enter an 11-digit phone number" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" class="input" id="dob" name="dob" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <strong>Gender *</strong>
+                        <div class="row options">
+                            <label for="male">Male</label>
+                            <input type="radio" id="male" name="gender" value="male" required>
+                            <label for="female">Female</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="other">Other</label>
+                            <input type="radio" id="other" name="gender" value="other">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section" id="course-section">
+                <h2>Course Details</h2>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="course">Course *</label>
+                        <select class="input" id="course" name="course" required>
+                            <option value="">-- Select a course --</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="software-engineering">Software Engineering</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="graphic-design">Graphic Design</option>
+                            <option value="digital-marketing">Digital Marketing</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <strong>Skills</strong>
+                        <div class="row options">
+                            <label for="html">HTML</label>
+                            <input type="checkbox" id="html" name="skills" value="html">
+                            <label for="css">CSS</label>
+                            <input type="checkbox" id="css" name="skills" value="css">
+                            <label for="javascript">JavaScript</label>
+                            <input type="checkbox" id="javascript" name="skills" value="javascript">
+                            <label for="react">React</label>
+                            <input type="checkbox" id="react" name="skills" value="react">
+                            <label for="nodejs">Node.js</label>
+                            <input type="checkbox" id="nodejs" name="skills" value="nodejs">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section" id="extra-section">
+                <h2>Additional Information</h2>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="address">Address *</label>
+                        <textarea class="input" id="address" name="address" rows="3"
+                            placeholder="House no., street, city" required>
+                        </textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea class="input" id="message" name="message" rows="4"
+                            placeholder="Anything you would like us to know (optional)">
+                        </textarea>
+                    </div>
+                </div>
+            </section>
+
+            <div class="row buttons">
+                <button type="submit" class="btn btn-submit" id="submit-btn">Submit</button>
+                <button type="reset" class="btn btn-reset" id="reset-btn">Reset</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
